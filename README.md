@@ -4,4 +4,5 @@ Code: C#
 Languages: English, Spanish.
 Max number of digit: 16
 Allow decimals: yes.
+Input: positive Double number.
 Return: lower case text.
