@@ -10,6 +10,16 @@ namespace NumberToText
     {
         private string Lan;
 
+        public string Numero_a_Texto(double N)
+        {
+            return Numero_a_Texto(N, "es", false);
+        }
+
+        public string Numero_a_Texto(double N, string lan = "es")
+        {
+            return Numero_a_Texto(N, lan, false);
+        }
+
         public string Numero_a_Texto(double N, string lan = "es", Boolean Miles = false, Boolean Mayusculas = false, Boolean MayMin = true)
         {
             string cNumero;
@@ -69,7 +79,7 @@ namespace NumberToText
 
             if (Billones > 0)
             {
-                r = Numero_a_Texto(Billones, Lan, false, Mayusculas, MayMin);
+                r = Numero_a_Texto(Billones, Lan, true, Mayusculas, MayMin);
                 if (lan == "es")
                 {
                     if (Billones > 1)
@@ -83,7 +93,7 @@ namespace NumberToText
 
             if (Millones > 0)
             {
-                r += Numero_a_Texto(Millones, Lan, false, Mayusculas, MayMin);
+                r += Numero_a_Texto(Millones, Lan, true, Mayusculas, MayMin);
                 if (lan == "es")
                 {
                     if (Millones > 1)
@@ -137,9 +147,14 @@ namespace NumberToText
                 r += Unidades(byte.Parse(Unidad), Miles);
 
             if (N - Math.Truncate(N) > 0)
-                r += "c/" + (Math.Round(N - Math.Truncate(N), 2) * 100) + " Cvs.";
+            {
+                if (lan == "es")
+                    r += "c/" + (Math.Round(N - Math.Truncate(N), 2) * 100) + " Cvs.";
+                else
+                    r += "and" + (Math.Round(N - Math.Truncate(N), 2) * 100) + " Cents";
+            }
 
-            return r.Trim();
+            return r;
         }
         
         private string Unidades(byte nUnidad, Boolean Miles)

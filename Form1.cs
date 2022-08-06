@@ -28,6 +28,7 @@ namespace NumberToText
 
         private void RbEsp_CheckedChanged(object sender, EventArgs e)
         {
+            this.Text = "Numeros a palabras";
             Lan = "es";
             lblNro.Text = "Número #";
             btnTransc.Text = "&Transcribir";
@@ -36,6 +37,7 @@ namespace NumberToText
 
         private void RbEng_CheckedChanged(object sender, EventArgs e)
         {
+            this.Text = "Numbers to words";
             Lan = "en";
             lblNro.Text = "Number #";
             btnTransc.Text = "&Transcribe";

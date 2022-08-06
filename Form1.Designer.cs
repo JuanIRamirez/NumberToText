@@ -54,7 +54,7 @@ namespace NumberToText
             this.tbText.Name = "tbText";
             this.tbText.ReadOnly = true;
             this.tbText.Size = new System.Drawing.Size(502, 185);
-            this.tbText.TabIndex = 2;
+            this.tbText.TabIndex = 4;
             // 
             // rbEsp
             // 
@@ -63,7 +63,7 @@ namespace NumberToText
             this.rbEsp.Location = new System.Drawing.Point(348, 67);
             this.rbEsp.Name = "rbEsp";
             this.rbEsp.Size = new System.Drawing.Size(63, 17);
-            this.rbEsp.TabIndex = 3;
+            this.rbEsp.TabIndex = 1;
             this.rbEsp.TabStop = true;
             this.rbEsp.Text = "&Español";
             this.rbEsp.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@ namespace NumberToText
             this.rbEng.Location = new System.Drawing.Point(455, 67);
             this.rbEng.Name = "rbEng";
             this.rbEng.Size = new System.Drawing.Size(59, 17);
-            this.rbEng.TabIndex = 4;
+            this.rbEng.TabIndex = 2;
             this.rbEng.Text = "E&nglish";
             this.rbEng.UseVisualStyleBackColor = true;
             this.rbEng.CheckedChanged += new System.EventHandler(this.RbEng_CheckedChanged);
@@ -90,7 +90,7 @@ namespace NumberToText
             0});
             this.tbNro.Name = "tbNro";
             this.tbNro.Size = new System.Drawing.Size(120, 20);
-            this.tbNro.TabIndex = 5;
+            this.tbNro.TabIndex = 0;
             this.tbNro.ValueChanged += new System.EventHandler(this.TbNro_ValueChanged);
             // 
             // btnTransc
@@ -98,7 +98,7 @@ namespace NumberToText
             this.btnTransc.Location = new System.Drawing.Point(599, 67);
             this.btnTransc.Name = "btnTransc";
             this.btnTransc.Size = new System.Drawing.Size(75, 23);
-            this.btnTransc.TabIndex = 6;
+            this.btnTransc.TabIndex = 3;
             this.btnTransc.Text = "&Transcribir";
             this.btnTransc.UseVisualStyleBackColor = true;
             this.btnTransc.Click += new System.EventHandler(this.BtnTransc_Click);
