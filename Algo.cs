@@ -20,7 +20,7 @@ namespace NumberToText
             return Numero_a_Texto(N, lan, false);
         }
 
-        public string Numero_a_Texto(double N, string lan = "es", Boolean Miles = false, Boolean Mayusculas = false, Boolean MayMin = true)
+        public string Numero_a_Texto(double N, string lan = "es", Boolean Miles = false)
         {
             string cNumero;
             string Unidad;
@@ -79,7 +79,7 @@ namespace NumberToText
 
             if (Billones > 0)
             {
-                r = Numero_a_Texto(Billones, Lan, true, Mayusculas, MayMin);
+                r = Numero_a_Texto(Billones, Lan, true);
                 if (lan == "es")
                 {
                     if (Billones > 1)
@@ -93,7 +93,7 @@ namespace NumberToText
 
             if (Millones > 0)
             {
-                r += Numero_a_Texto(Millones, Lan, true, Mayusculas, MayMin);
+                r += Numero_a_Texto(Millones, Lan, true);
                 if (lan == "es")
                 {
                     if (Millones > 1)
@@ -108,7 +108,10 @@ namespace NumberToText
             if (N > 999)
                 if (Entero / 1000 >= 1)
                 {
-                    r += Numero_a_Texto(Entero / 1000, Lan, true, Mayusculas, MayMin);
+                    //bool mil = true;
+                    //if (Entero / 1000 > 1)
+                    //    mil = false;
+                    r += Numero_a_Texto(Entero / 1000, Lan, true);
                     if (lan == "es")
                         r += "mil ";
                     else
@@ -165,7 +168,7 @@ namespace NumberToText
                 if (nUnidad == 1)
                 {
                     if (Miles)
-                        r = "";
+                        r = "un ";
                     else
                         r = "uno ";
                 }
